@@ -46,17 +46,15 @@ class App extends Component {
       name: name,
       number: number,
     };
-    this.setState((prevState) => ({ contacts: [...prevState.contacts, item] }));
-    this.setState({ name: "" });
-    this.setState({ number: "" });
+    this.setState((prevState) => ({ contacts: [...prevState.contacts, item], name: "", number: "" }));
+    // this.setState({ name: "" });
+    // this.setState({ number: "" });
   };
 
   handleChangeFilter = ({ value }) => {
-    this.setState((prevState) => {
-      return {
+    this.setState({
         filter: value,
-      };
-    });
+      });
   };
 
   handleFindContact = (filter) => {
